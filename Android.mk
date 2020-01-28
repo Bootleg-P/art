@@ -366,22 +366,6 @@ LOCAL_REQUIRED_MODULES += libart_fake
 # * We will always add them if PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD = true.
 # * Otherwise, we will add them by default to eng builds.
 art_target_include_debug_build := false
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD = false
-ifeq (true,$(art_target_include_debug_build))
-LOCAL_REQUIRED_MODULES += \
-    dex2oatd \
-    dexoptanalyzerd \
-    libartd \
-    libartd-compiler \
-    libopenjdkd \
-    libopenjdkjvmd \
-    libopenjdkjvmtid \
-    patchoatd \
-    profmand \
-    libadbconnectiond \
-
-endif
-endif
 
 include $(BUILD_PHONY_PACKAGE)
 
